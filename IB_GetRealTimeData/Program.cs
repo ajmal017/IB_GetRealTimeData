@@ -10,6 +10,8 @@ namespace IB_GetRealTimeData
     {
         static void Main(string[] args)
         {
+            RealTimeData realTimeData = new RealTimeData();
+            realTimeData.GetRealTimeData();
         }
     }
 }
