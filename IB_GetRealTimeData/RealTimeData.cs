@@ -8,14 +8,21 @@ namespace IB_GetRealTimeData
 {
     class RealTimeData
     {
+        private IBGatewayClientConnectionData iBGatewayClientConnectionData;
+
+        public RealTimeData(IBGatewayClientConnectionData iBGatewayClientConnectionData)
+        {
+            this.iBGatewayClientConnectionData = iBGatewayClientConnectionData;
+        }
+
         public void GetRealTimeData()
         {
             // Create the ibClient object to represent the connection
-            // If you changed the samples Namespace name, use your new 
-            // name here in place of "Samples".
             EWrapperImpl ibClient = new EWrapperImpl();
 
-            ibClient.ClientSocket.eConnect("", 4002, 0);
+            ibClient.ClientSocket.eConnect(iBGatewayClientConnectionData.Server,
+                                           iBGatewayClientConnectionData.Port,
+                                           iBGatewayClientConnectionData.ClientId);
 
             var reader = new EReader(ibClient.ClientSocket, ibClient.Signal);
             reader.Start();

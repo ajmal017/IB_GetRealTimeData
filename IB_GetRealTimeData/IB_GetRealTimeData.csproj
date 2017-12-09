@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EWrapperImpl.cs" />
+    <Compile Include="IBGatewayClientConnectionData.cs" />
     <Compile Include="RealTimeData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
