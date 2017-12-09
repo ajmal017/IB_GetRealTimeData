@@ -10,7 +10,7 @@ namespace IB_GetRealTimeData
     {
         static void Main(string[] args)
         {
-            IBGatewayClientConnectionData iBGatewayClientConnectionData = new IBGatewayClientConnectionData("", 4002, 0); // todo - get from db
+            IBGatewayClientConnectionData iBGatewayClientConnectionData = new IBGatewayClientConnectionData("", 4002, 2001); // todo - get from db
             RealTimeData realTimeData = new RealTimeData(iBGatewayClientConnectionData);
             realTimeData.GetRealTimeData();
         }
